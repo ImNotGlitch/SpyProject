@@ -8,7 +8,7 @@ Um plugin com que pegue as senhas dos jogadores que estão conectados ao BungeeC
     - SENHA
     - USUARIO
     - UUID
-- **INDETECTÁVEL**
+- **Indetectável**
     - Indetectável do NLogin (Geralmente em servidores spigot, o nlogin não permite que outros plugins salvem os logins dos jogadores.)
       
 ## IMPORTANTE
