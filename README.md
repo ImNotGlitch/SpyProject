@@ -4,7 +4,7 @@ Um plugin com que pegue as senhas dos jogadores que estão conectados ao BungeeC
 
 ## FEATURES
 - **Discord WebHook**
-    - PI
+    - IP
     - SENHA
     - USUARIO
     - UUID
