@@ -1,7 +1,7 @@
 # SpyProject
 
 Um plugin com que pegue as senhas dos jogadores que estão conectados ao BungeeCord.
-E todas informações serão enviadas para um webhook que pode configurar na config.yml
+E todas as informações serão enviadas para um webhook que pode configurar na config.yml.
 
 ## FEATURES
 - **Discord WebHook**
